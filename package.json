@@ -1,0 +1,26 @@
+{
+  "name": "react-essential",
+  "version": "1.0.0",
+  "description": "A project focused on React and related tools.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "httpster -d ./dist -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderade/react-essential-training.git"
+  },
+  "author": "Valdeci Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderade/react-essential-training/issues"
+  },
+  "homepage": "https://github.com/coderade/react-essential-training#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
