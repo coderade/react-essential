@@ -78,7 +78,7 @@ render(React.createElement(
     "h1",
     { id: "title", className: "header",
         style: { backgroundColor: 'green', color: 'white', fontFamily: 'verdana' } },
-    "Hello World"
+    "Hello Wsorld"
 ), document.getElementById('react-container'));
 
 /***/ })
