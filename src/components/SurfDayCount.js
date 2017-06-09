@@ -1,5 +1,6 @@
 import React from 'react'
 import createReactClass from 'create-react-class'
+import '../stylesheets/ui.scss'
 
 
 export const SurfDayCount = createReactClass({
