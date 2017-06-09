@@ -1,1 +1,1 @@
-# react-essential-training
+# react-activity-counter
