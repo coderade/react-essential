@@ -1,8 +1,10 @@
 import React from 'react'
-import { render } from 'react-dom'
+import {render} from 'react-dom'
+import {SurfDayCount} from './components/SurfDayCount'
+
+window.React = React;
 
 render(
-    <div>
-    </div>,
+    <SurfDayCount />,
     document.getElementById('react-container')
 );
