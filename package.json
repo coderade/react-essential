@@ -1,7 +1,7 @@
 {
-  "name": "react-essential",
+  "name": "react-activity-counter",
   "version": "1.0.0",
-  "description": "A project focused on React and related tools.",
+  "description": "Activity Counter made in React.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
