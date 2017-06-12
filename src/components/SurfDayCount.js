@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import '../stylesheets/ui.scss'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 import Terrain from 'react-icons/lib/md/terrain'
 import Wave from 'react-icons/lib/go/pulse'
