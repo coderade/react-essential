@@ -24,6 +24,15 @@ const SurfDayList = ({days}) => {
 
 SurfDayList.propTypes = {
     days: PropTypes.array
+
+    // Function propType validation example.
+    // days: function (props) {
+    //     if(!Array.isArray(props.days)){
+    //         return new Error('SurfDayList shoud be an array')
+    //     } else if (!props.days.length){
+    //         return new Error('SurfDayList must have at least one record')
+    //     }
+    // }
 };
 
 export default SurfDayList;
