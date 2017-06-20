@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
 import SurfDayList from './SurfDayList'
 import SurfDayCount from './SurfDayCount'
+import AddDayForm from './AddDayForm'
 
 
 export default class App extends Component {
@@ -47,14 +49,20 @@ export default class App extends Component {
     render() {
         return (
             <div className="app">
-                <SurfDayList days={this.state.allSurfDays}/>
-                <SurfDayCount total={this.countDays()}
-                              hazards={this.countDays(('havards'))}
-                              crowded={this.countDays(('crowded'))}
-
-                />
-
+                {(this.props.location.pathname === '/') ?
+                    <SurfDayCount total={this.countDays()}
+                                  hazards={this.countDays(('havards'))}
+                                  crowded={this.countDays(('crowded'))}
+                    /> :
+                    (this.props.location.pathname === '/add-day') ?
+                        <AddDayForm/> :
+                        <SurfDayList days={this.state.allSurfDays}/>
+                }
             </div>
         )
     }
 }
+
+App.propTypes = {
+    location: PropTypes.object
+};

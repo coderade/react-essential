@@ -11,6 +11,8 @@ render(
     <HashRouter>
         <div>
             <Route exact path='/' component={App}/>
+            <Route path='/list-days' component={App}/>
+            <Route path='/add-day' component={App}/>
             <Route exact path="*" component={Page404}/>
         </div>
     </HashRouter>,
