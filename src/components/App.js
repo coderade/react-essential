@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import SurfDayList from './SurfDayList'
 import SurfDayCount from './SurfDayCount'
 import AddDayForm from './AddDayForm'
+import Menu from './Menu'
 
 
 export default class App extends Component {
@@ -49,6 +50,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="app">
+                <Menu/>
                 {(this.props.location.pathname === '/') ?
                     <SurfDayCount total={this.countDays()}
                                   hazards={this.countDays(('havards'))}

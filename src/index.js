@@ -1,7 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
 import App from './components/App'
-import Page404 from './components/Page404'
+import NotFound from './components/NotFound'
 import {HashRouter, Route, Switch} from 'react-router-dom'
 
 
@@ -14,7 +14,7 @@ render(
             <Route exact path='/' component={App}/>
             <Route path='/list-days' component={App}/>
             <Route path='/add-day' component={App}/>
-            <Route component={Page404}/>
+            <Route component={NotFound}/>
             </Switch>
         </div>
     </HashRouter>,
