@@ -12,7 +12,7 @@ const Menu = () =>
         <NavLink to="add-day" activeClassName="selected">
             <AddDayIcon/>
         </NavLink>
-        <NavLink to="list-days" activeClassName="selected">
+        <NavLink to="/list-days" activeClassName="selected">
             <ListDaysIcon/>
         </NavLink>
     </nav>;

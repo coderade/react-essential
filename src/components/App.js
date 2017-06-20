@@ -58,7 +58,8 @@ export default class App extends Component {
                     /> :
                     (this.props.location.pathname === '/add-day') ?
                         <AddDayForm/> :
-                        <SurfDayList days={this.state.allSurfDays}/>
+                        <SurfDayList days={this.state.allSurfDays}
+                            filter={this.props.params.filter}/>
                 }
             </div>
         )
@@ -66,5 +67,6 @@ export default class App extends Component {
 }
 
 App.propTypes = {
-    location: PropTypes.object
+    location: PropTypes.object,
+    params: PropTypes.object
 };
