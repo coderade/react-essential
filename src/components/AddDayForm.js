@@ -1,33 +1,55 @@
-import React, {Component} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-class AddDayForm extends Component {
-    render() {
+export const AddDayForm = ({beach, date, hazards, crowded}) => {
 
-        const {beach, date, hazards, crowded} = this.props;
+    let _beach, _date, _hazards, _crowded;
 
-        return (
-            <form className="add-day-form">
+    const submit = (e) => {
+        e.preventDefault();
+        console.log('beach', _beach.value);
+        console.log('date', _date.value);
+        console.log('hazards', _hazards.checked);
+        console.log('crowded', _crowded.checked);
+    };
 
-                <label htmlFor="beach">Beach</label>
-                <input id="beach" type="text" defaultValue={beach} required/>
+    return (
+        <form onSubmit={submit} className="add-day-form">
 
-                <label htmlFor="date">Date</label>
-                <input id="date" type="date" defaultValue={date} required/>
+            <label htmlFor="beach">Beach</label>
+            <input id="beach"
+                   type="text"
+                   defaultValue={beach}
+                   ref={input => _beach = input}
+                   required/>
 
-                <div>
-                    <input id="hazards" type="checkbox" defaultChecked={hazards} required/>
-                    <label htmlFor="hazards">Dangerous?</label>
-                </div>
+            <label htmlFor="date">Date</label>
+            <input id="date"
+                   type="date"
+                   defaultValue={date}
+                   ref={input => _date = input}
+                   required/>
 
-                <div>
-                    <input id="crowded" type="checkbox" defaultChecked={crowded} required/>
-                    <label htmlFor="crowded">Is Crowded?</label>
-                </div>
-            </form>
-        )
-    }
-}
+            <div>
+                <input id="hazards"
+                       type="checkbox"
+                       defaultChecked={hazards}
+                       ref={input => _hazards = input}/>
+                <label htmlFor="hazards">Dangerous?</label>
+            </div>
+
+            <div>
+                <input id="crowded"
+                       type="checkbox"
+                       defaultChecked={crowded}
+                       ref={input => _crowded = input}/>
+                <label htmlFor="crowded">Is Crowded?</label>
+            </div>
+
+            <button>Add Day</button>
+        </form>
+    )
+};
 
 AddDayForm.defaultProps = {
     beach: 'Hawaii',
