@@ -12,32 +12,25 @@ export default class App extends Component {
         this.state = {
             allSurfDays: [
                 {
-                    beach: 'Hawaii',
-                    date: new Date('01/16/2017'),
-                    hazards: true,
-                    crowded: false
-                },
-                {
-                    beach: 'Maresias',
-                    date: new Date('06/19/2017'),
-                    hazards: true,
-                    crowded: false
-                },
-                {
                     beach: 'Fiji',
-                    date: new Date('12/25/2017'),
-                    hazards: true,
-                    crowded: true
-                },
-                {
-                    beach: 'Rio',
-                    date: new Date('08/29/2017'),
+                    date: '2016-01-02',
                     hazards: true,
                     crowded: true
                 }
 
             ]
-        }
+        };
+
+        this.addDay = this.addDay.bind(this)
+    }
+
+    addDay(newDay) {
+        this.setState({
+            allSurfDays: [
+                ...this.state.allSurfDays,
+                newDay
+            ]
+        })
     }
 
     countDays(filter) {
@@ -57,7 +50,7 @@ export default class App extends Component {
                                   crowded={this.countDays(('crowded'))}
                     /> :
                     (this.props.location.pathname === '/add-day') ?
-                        <AddDayForm/> :
+                        <AddDayForm onNewDay={this.addDay}/> :
                         <SurfDayList days={this.state.allSurfDays}
                             filter={'crowded'}/>
                 }

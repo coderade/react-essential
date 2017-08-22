@@ -18,8 +18,8 @@ const SurfDayRow = ({beach, date, hazards, crowded}) => {
 };
 
 SurfDayRow.propTypes = {
-    beach: PropTypes.string,
-    date: PropTypes.instanceOf(Date),
+    beach: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
     hazards: PropTypes.bool,
     crowded: PropTypes.bool
 };

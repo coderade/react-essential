@@ -1,16 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const AddDayForm = ({beach, date, hazards, crowded}) => {
+export const AddDayForm = ({beach,
+                               date,
+                               hazards,
+                               crowded,
+                               onNewDay}) => {
 
     let _beach, _date, _hazards, _crowded;
 
     const submit = (e) => {
         e.preventDefault();
-        console.log('beach', _beach.value);
-        console.log('date', _date.value);
-        console.log('hazards', _hazards.checked);
-        console.log('crowded', _crowded.checked);
+        onNewDay({
+            beach: _beach.value,
+            date: _date.value,
+            hazards: _hazards.value,
+            crowded: _crowded.value
+        });
+
+        _beach.value = '';
+        _date.value = '';
+        _hazards.value = false;
+        _crowded.value = false;
     };
 
     return (
