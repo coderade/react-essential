@@ -7,8 +7,8 @@ import Menu from './Menu'
 
 
 export default class App extends Component {
-    constructor(props) {
-        super(props);
+    constructor(props, match) {
+        super(props, match);
         this.state = {
             allSurfDays: [
                 {
@@ -59,7 +59,7 @@ export default class App extends Component {
                     (this.props.location.pathname === '/add-day') ?
                         <AddDayForm/> :
                         <SurfDayList days={this.state.allSurfDays}
-                            filter={this.props.params.filter}/>
+                            filter={'crowded'}/>
                 }
             </div>
         )
@@ -68,5 +68,6 @@ export default class App extends Component {
 
 App.propTypes = {
     location: PropTypes.object,
-    params: PropTypes.object
+    params: PropTypes.object,
+    match: PropTypes.object
 };
