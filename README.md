@@ -4,7 +4,7 @@
 
 **This project has been developed in 2016 for the purpose of demonstrating how to work with states and stateless components using the React Route some and is not maintained anymore. Some libraries are being updated using the [Dependabot](https://dependabot.com/) and [Snyk.io](https://snyk.io/) services, but no further tests are being done.**
 
-Simple Activy counter project to show how to work with states and stateless components in React. 
+Simple Activity counter project to show how to work with states and stateless components in React. 
 
 ### How to use
 
@@ -25,6 +25,6 @@ After this, you can run the application.
 
 You can use the Npm to serve this application.
 
-To do this on the root of the project, use the `npm start` command.
+To do this at the root of the project, use the `npm start` command.
 
 Then navigate your browser to http://localhost:3030 to see the app running in your browser.
